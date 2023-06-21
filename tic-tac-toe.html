@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            margin-left: 350px;
+            margin-top: 50px;
+             }
+
+        .box {
+            border: 2px solid black;
+            height: 150px;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bolder;
+            padding: 50px;
+             }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div class="main">
+
+        <div id="1" class="box" onclick="gamecontainer(1)"></div>
+        <div id="2" class="box" onclick="gamecontainer(2)"></div>
+        <div id="3" class="box" onclick="gamecontainer(3)"></div>
+        <div id="4" class="box" onclick="gamecontainer(4)"></div>
+        <div id="5" class="box" onclick="gamecontainer(5)"></div>
+        <div id="6" class="box" onclick="gamecontainer(6)"></div>
+        <div id="7" class="box" onclick="gamecontainer(7)"></div>
+        <div id="8" class="box" onclick="gamecontainer(8)"></div>
+        <div id="9" class="box" onclick="gamecontainer(9)"></div>
+
+    </div>
+
+
+    <script>
+
+        var contain = 0;
+        function gamecontainer(id) {
+        
+        
+        var element = document.getElementById(id);
+               
+            
+             if(element.innerText === ""){
+                contain++;
+                element.innerText = contain % 2 !== 0 ? "X" : "0";
+            if(contain >= 9){
+                setTimeout(reset, 1000);
+                
+            }
+            // if (contain % 2 != 0) {
+            //      element.innerText = "X";
+            // }
+            // else {
+            //      element.innerText = "0";
+            //      }
+            }
+        }
+        function reset(){
+            contain = 0;
+            var list = document.getElementsByClassName("box");
+            for (var i= 0; i< list.length; i++){
+                list[i].innerText = "";
+            }
+        }
+
+        
+
+</script>
+</body>
+
+</html>

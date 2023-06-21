@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          
+.box{
+
+  height: 200px;
+width: 200px;
+border: 1px solid black;
+display: inline-block;
+margin: 10px;
+}
+
+.box:hover{
+border: 2px solid blue;
+}
+
+.greenbox{
+background-color: green;
+}
+
+       
+
+    </style>
+</head>
+<body>
+   
+ <div id="1" class="box" onclick="handleclick('1')"></div>
+ <div id="2" class="box" onclick="handleclick('2')"></div>
+ <div id="3" class="box" onclick="handleclick('3')"></div>
+ <div id="4" class="box" onclick="handleclick('4')"></div>
+ <div id="5" class="box" onclick="handleclick('5')"></div>
+ <div id="6" class="box" onclick="handleclick('6')"></div>
+ <div id="7" class="box" onclick="handleclick('7')"></div>
+ <div id="8" class="box" onclick="handleclick('8')"></div>
+ <div id="9" class="box" onclick="handleclick('9')"></div>
+ <div id="10" class="box" onclick="handleclick('10')"></div>
+
+
+<script>
+
+  function handleclick(id){
+    var clickedbox = document.getElementById(id);
+
+    var clickedbox = document.getElementById(id);
+    if (clickedbox.classList.contains("greenbox")) {
+      clickedbox.classList.remove("greenbox");}
+    else{
+        clickedbox.classList.add("greenbox");
+    }
+    
+}
+  
+  
+</script>
+</body>
+</html>

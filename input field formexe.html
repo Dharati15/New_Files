@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html >
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+   name:<input type="text" id="name"><br><br>
+   <button onclick="storage();">Submit</button>
+  <p id="target">    </p>
+   
+    <script>
+          
+         function storage() {
+            var store = document.getElementById("name").value;
+            document.getElementById("name").value = "";
+document.getElementById("target").innerHTML = store;
+            
+         };
+    </script>
+</body>
+</html>
